@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.focusflowai.R
 
 
-class StudentDashBoardFragment : Fragment() {
+class StudentDashBoardFragment : Fragment(R.layout.fragment_student_dash_board) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -45,9 +45,11 @@ class StudentSignUpSheet: BottomSheetDialogFragment(){
             registerStudent(name, email, pass)
         }
     }
-    private fun registerStudent(name:String,email:String,password:String){
-        dismiss()
-
+    private fun registerStudent(name:String,email:String,password:String){4
+        val success = viewModel.signup(name,email,password)
+        if(success){
+            dismiss()
+        }
     }
     override fun onDestroy() {
         super.onDestroy()

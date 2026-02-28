@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.focusflowai.R
@@ -48,9 +49,14 @@ class StudentBottomSheetLogin: BottomSheetDialogFragment(){
         }
     }
 
-    private fun loginStudent(email: String, password: String) {
-        dismiss()
-        findNavController().navigate(R.id.action_loginFragment_to_studentDashBoardFragment)
+    private fun loginStudent(email: String,password: String){
+        val success = viewModel.login(email,password)
+        if(success){
+            dismiss()
+            requireActivity()
+                .findNavController(R.id.nav_host_fragment)
+                .navigate(R.id.action_loginFragment_to_studentDashBoardFragment)
+        }
     }
 
     override fun onDestroyView() {

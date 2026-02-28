@@ -1,14 +1,378 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.student.home.StudentDashBoardFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:fillViewport="true">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <!-- HEADER -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/bg_header_blue"
+            android:padding="16dp">
+
+            <TextView
+                android:text="Welcome Hitesh"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user_profile"/>
+        </RelativeLayout>
+
+        <!-- TITLE -->
+        <TextView
+            android:text="Ready to focus today?"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/textPrimary"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Let AI guide your learning session"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/textSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_card"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="10dp"
+            app:strokeWidth="0dp"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Engagement Score :"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_marginStart="8dp"
+                    android:layout_width="120dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/progress_blue"/>
+
+                <TextView
+                    android:text="75%"
+                    android:textSize="13sp"
+                    android:textColor="@color/textPrimary"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Risk Level:"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <FrameLayout
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="75dp"
+                    android:background="@drawable/riskindicatorlowbg"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:text="AI Insight:"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/aiInsightsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good Focus"
+                android:textSize="13sp"
+                android:layout_marginStart="75dp"/>
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- START BUTTON -->
+        <Button
+            android:id="@+id/btnStartLearning"
+            android:text="Start Learning Session"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_blue"
+            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+        <!-- LAST SESSION CARD -->
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="10dp"
+            app:strokeWidth="0dp"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Last Session"
+                android:textSize="16sp"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Duration:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvDurationTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="42min"
+                    android:textSize="13sp"
+                    android:layout_marginStart="75dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Quiz Score:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/QuizScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="65%"
+                    android:textSize="13sp"
+                    android:layout_marginStart="65dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Risk Level:"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <FrameLayout
+                    android:id="@+id/last_session_riskLevel"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="75dp"
+                    android:background="@drawable/riskindicatormediumbg"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- STATS ROW -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="10dp"
+                app:strokeWidth="0dp"
+                android:layout_height="150dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/sessions"/>
+
+                <TextView
+                    android:id="@+id/tvSessionscnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:layout_marginTop="6dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvSessions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sessions"
+                    android:layout_marginTop="6dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                </LinearLayout>
+                
+            </com.google.android.material.card.MaterialCardView>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="10dp"
+                app:strokeWidth="0dp"
+                android:layout_width="0dp"
+                android:layout_height="150dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/avg_focus"/>
+
+                <TextView
+                    android:id="@+id/tvAvgFocus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:layout_marginTop="6dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Avg Focus"
+                    android:layout_marginTop="6dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
