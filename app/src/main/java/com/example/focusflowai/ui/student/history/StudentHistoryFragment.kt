@@ -1,4 +1,4 @@
-package com.example.focusflowai.ui.instructor.dashboard
+package com.example.focusflowai.ui.student.history
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [FragmentInstructorDashBoard.newInstance] factory method to
+ * Use the [StudentHistoryFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FragmentInstructorDashBoard : Fragment() {
+class StudentHistoryFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,7 +35,7 @@ class FragmentInstructorDashBoard : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_instructor_dash_board, container, false)
+        return inflater.inflate(R.layout.fragment_student_history, container, false)
     }
 
     companion object {
@@ -45,12 +45,12 @@ class FragmentInstructorDashBoard : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentInstructorDashBoard.
+         * @return A new instance of fragment StudentHistoryFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            FragmentInstructorDashBoard().apply {
+            StudentHistoryFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
