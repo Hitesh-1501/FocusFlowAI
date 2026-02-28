@@ -13,4 +13,12 @@ class AuthViewModel : ViewModel() {
                 && email.isNotEmpty()
                 && password.isNotEmpty()
     }
+    fun loginInstructor(email: String, password: String) : Boolean{
+        return email.isNotEmpty() && password.isNotEmpty()
+    }
+    fun signupInstructor(email: String, password: String): Boolean {
+        return email.isNotEmpty()
+                && password.isNotEmpty()
+    }
+
 }

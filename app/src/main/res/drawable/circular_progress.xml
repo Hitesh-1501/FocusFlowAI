@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <vector
+            android:width="120dp"
+            android:height="120dp"
+            android:viewportWidth="120"
+            android:viewportHeight="120">
+            <path
+                android:pathData="M60,11.5A48.5,48.5 0,1 1,11.5 60A48.5,48.5 0,0 1,60 11.5Z"
+                android:strokeColor="#FFE8E8E8"
+                android:strokeWidth="1"
+                android:strokeLineCap="round"/>
+        </vector>
+    </item>
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="-90"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="270">
+            <vector
+                android:width="120dp"
+                android:height="120dp"
+                android:viewportWidth="120"
+                android:viewportHeight="120">
+                <path
+                    android:pathData="M60,11.5A48.5,48.5 0,0 1,102.5 37.5"
+                    android:strokeColor="#FFEE5353"
+                    android:strokeWidth="6"
+                    android:strokeLineCap="round"/>
+                <path
+                    android:pathData="M102.5,37.5A48.5,48.5 0,0 1,60 108.5A48.5,48.5 0,0 1,17.5 82.5"
+                    android:strokeColor="#FFFFC928"
+                    android:strokeWidth="6"
+                    android:strokeLineCap="round"/>
+                <path
+                    android:pathData="M17.5,82.5A48.5,48.5 0,0 1,11.5 60A48.5,48.5 0,0 1,60 11.5"
+                    android:strokeColor="#FF2ECC71"
+                    android:strokeWidth="6"
+                    android:strokeLineCap="round"/>
+            </vector>
+        </rotate>
+    </item>
+</layer-list>

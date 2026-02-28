@@ -24,12 +24,35 @@
         <action
             android:id="@+id/action_loginFragment_to_studentDashBoardFragment"
             app:destination="@id/studentDashBoardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_fragmentInstructorDashBoard"
+            app:destination="@id/fragmentInstructorDashBoard" />
     </fragment>
     <fragment
         android:id="@+id/studentDashBoardFragment"
         android:name="com.example.focusflowai.ui.student.home.StudentDashBoardFragment"
         android:label="fragment_student_dash_board"
-        tools:layout="@layout/fragment_student_dash_board" />
+        tools:layout="@layout/fragment_student_dash_board" >
+        <action
+            android:id="@+id/action_studentDashBoardFragment_to_learningFrament"
+            app:destination="@id/learningFrament" />
+    </fragment>
+    <fragment
+        android:id="@+id/learningFrament"
+        android:name="com.example.focusflowai.ui.student.learning.LearningFrament"
+        android:label="LearningFrament" >
+        <action
+            android:id="@+id/action_learningFrament_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.focusflowai.ui.student.quiz.QuizFragment"
+        android:label="QuizFragment" />
+    <fragment
+        android:id="@+id/fragmentInstructorDashBoard"
+        android:name="com.example.focusflowai.ui.instructor.dashboard.FragmentInstructorDashBoard"
+        android:label="FragmentInstructorDashBoard" />
 
 
 </navigation>
