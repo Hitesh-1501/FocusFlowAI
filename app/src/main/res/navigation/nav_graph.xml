@@ -48,11 +48,39 @@
     <fragment
         android:id="@+id/quizFragment"
         android:name="com.example.focusflowai.ui.student.quiz.QuizFragment"
-        android:label="QuizFragment" />
+        android:label="QuizFragment" >
+        <action
+            android:id="@+id/action_quizFragment_to_studentPredictionFragment"
+            app:destination="@id/studentPredictionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentInstructorDashBoard"
-        android:name="com.example.focusflowai.ui.instructor.dashboard.FragmentInstructorDashBoard"
+        android:name="com.example.focusflowai.ui.instructor.dashboard.InstructorDashboardFragment"
         android:label="FragmentInstructorDashBoard" />
+    <fragment
+        android:id="@+id/studentPredictionFragment"
+        android:name="com.example.focusflowai.ui.student.prediction.StudentPredictionFragment"
+        android:label="StudentPredictionFragment" >
+        <action
+            android:id="@+id/action_studentPredictionFragment_to_studentHistoryFragment"
+            app:destination="@id/studentHistoryFragment" />
+        <action
+            android:id="@+id/action_studentPredictionFragment_to_breakFragment"
+            app:destination="@id/breakFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentHistoryFragment"
+        android:name="com.example.focusflowai.ui.student.history.StudentHistoryFragment"
+        android:label="StudentHistoryFragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/breakFragment"
+        android:name="com.example.focusflowai.ui.student.Break.BreakFragment"
+        android:label="BreakFragment" >
+        <action
+            android:id="@+id/action_breakFragment_to_studentHistoryFragment"
+            app:destination="@id/studentHistoryFragment" />
+    </fragment>
 
 
 </navigation>

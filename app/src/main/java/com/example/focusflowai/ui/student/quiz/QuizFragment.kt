@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.focusflowai.R
 import com.example.focusflowai.databinding.FragmentQuizBinding
 
@@ -33,7 +34,7 @@ class QuizFragment : Fragment(R.layout.fragment_quiz) {
                 binding.btnNext.text = "Submit"
             }
             if (question > 5){
-                //TODO NAVIGATE TO PREDICTION SCREEN
+                findNavController().navigate(R.id.action_quizFragment_to_studentPredictionFragment)
             }
         }
     }
